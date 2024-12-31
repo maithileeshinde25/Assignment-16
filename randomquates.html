@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Quotes</title>
+</head>
+<body style="background-repeat: no-repeat;background-size: cover;">
+
+    <div id="quote" style="text-align: center; font-size: 40px;margin-top: 210px;font-family: 'Times New Roman', Times, serif; "></div>
+   
+   
+</body>
+
+
+
+<script>
+let quotes=["Goal setting is the secret to a compelling future.",
+"Work until your bank account looks like a phone number.",
+"Opportunities don’t happen, you create them.",
+"If you can dream it, you can do it.",
+]
+
+
+
+let images=["https://img.freepik.com/premium-photo/woman-holding-white-carnation-against-white-wall_53876-109656.jpg",
+    "https://img.freepik.com/premium-photo/copy-space-quote-empty-paper-background_991638-2224.jpg",
+    "https://i.pinimg.com/736x/13/72/15/13721520f35334eb679bd416c3b41b0c.jpg",
+    "https://img.freepik.com/free-photo/bouquet-white-carnations-pink-background-isolated-flat-lay_169016-27105.jpg?ga=GA1.1.256801720.1726991058&semt=ais_hybrid"
+]
+
+quote=document.getElementById('quote');
+
+
+     
+
+        function getRandomindex() {
+            const randomIndex = quotes[Math.floor(Math.random() * quotes.length)];
+            const randomidimg= images[Math.floor(Math.random() * images.length)];
+            
+            quote.innerHTML  = randomIndex;
+
+            document.body.style.backgroundImage=`url(${randomidimg})`;
+
+        
+        }
+        getRandomindex()
+
+
+
+</script>
+
+</html>
